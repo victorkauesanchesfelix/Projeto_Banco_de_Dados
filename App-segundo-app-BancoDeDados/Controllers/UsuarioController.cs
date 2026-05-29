@@ -9,7 +9,7 @@ namespace App_segundo_app_BancoDeDados.Controllers
     {
         private IUsuarioRepositorio _usuarioRepositorio;
 
-        public UsuarioController (IUsuarioRepositorio usuarioRepositorio)
+        public UsuarioController(IUsuarioRepositorio usuarioRepositorio)
         {
             _usuarioRepositorio = usuarioRepositorio;
         }
@@ -30,6 +30,17 @@ namespace App_segundo_app_BancoDeDados.Controllers
                 _usuarioRepositorio.Cadastrar(usuario);
                 return RedirectToAction("index");
             }
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Atualizar(int id)
+        {
+            return View(_usuarioRepositorio.ObterUsuario(id));
+        }
+        [HttpPost]
+        public IActionResult Atualizar(Usuario usuario)
+        {
             return View();
         }
     }

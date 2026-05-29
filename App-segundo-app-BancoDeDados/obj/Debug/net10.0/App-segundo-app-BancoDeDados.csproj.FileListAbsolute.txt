@@ -635,3 +635,4 @@ C:\Users\VictorKaueSanchesFel\Desktop\Nova pasta\App-segundo-app-BancoDeDados\ob
 C:\Users\VictorKaueSanchesFel\Desktop\Nova pasta\App-segundo-app-BancoDeDados\obj\Debug\net10.0\App-segundo-app-BancoDeDados.pdb
 C:\Users\VictorKaueSanchesFel\Desktop\Nova pasta\App-segundo-app-BancoDeDados\obj\Debug\net10.0\App-segundo-app-BancoDeDados.genruntimeconfig.cache
 C:\Users\VictorKaueSanchesFel\Desktop\Nova pasta\App-segundo-app-BancoDeDados\obj\Debug\net10.0\ref\App-segundo-app-BancoDeDados.dll
+C:\Users\VictorKaueSanchesFel\Desktop\Nova pasta\App-segundo-app-BancoDeDados\obj\Debug\net10.0\App-segundo-app-BancoDeDados.sourcelink.json

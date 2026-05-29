@@ -72,7 +72,28 @@ namespace App_segundo_app_BancoDeDados.Repositorio
         }
         public Usuario ObterUsuario(int Id)
         {
-            throw new NotImplementedException();
+            using (var conexao = new MySqlConnection(_conexaoMySQL))
+            {
+                conexao.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT * from usuario " +
+                                                    " where IdUsu=@IdUsu", conexao);
+                cmd.Parameters.AddWithValue("@IdUsu", Id);
+
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                MySqlDataReader dr;
+
+                Usuario usuario = new Usuario();
+                dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+                while (dr.Read())
+                {
+                    usuario.IdUsu = Convert.ToInt32(dr["IdUsu"]);
+                    usuario.nomeUsu = (string)(dr["nomeUsu"]);
+                    usuario.Cargo = (string)(dr["Cargo"]);
+                    usuario.DataNasc = Convert.ToDateTime(dr["DataNasc"]);
+                }
+                return usuario;
+            }
         }
     }
 }
+
